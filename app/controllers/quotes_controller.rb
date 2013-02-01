@@ -7,4 +7,9 @@ class QuotesController < Rulers::Controller
     quote_1 = FileModel.find(1)
     render :quote, :obj => quote_1
   end
+
+  def index
+    quotes = FileModel.all
+    render :index, :quotes => quotes
+  end
 end
