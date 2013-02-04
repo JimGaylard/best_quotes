@@ -22,4 +22,10 @@ class QuotesController < Rulers::Controller
     m = FileModel.create attrs
     render :quote, :obj => m
   end
+
+  def show
+    quote = FileModel.find(params["id"])
+    ua = request.user_agent
+    render :quote, :obj => quote, :ua => ua
+  end
 end
