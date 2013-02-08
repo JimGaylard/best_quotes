@@ -20,4 +20,3 @@ PLATFORMS
 
 DEPENDENCIES
   rulers!
-  sqlite3
