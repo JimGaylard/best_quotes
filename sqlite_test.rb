@@ -6,6 +6,11 @@ STDERR.puts MyTable.schema.inspect
 
 # Create row
 mt = MyTable.create("title" => "I saw it!")
+mt["title"] = "I really did this time!"
+mt.save!
+
+mt2 = MyTable.find mt["id"]
+puts "Title: #{mt2["title"]}"
 
 puts "Count: #{MyTable.count}"
 
