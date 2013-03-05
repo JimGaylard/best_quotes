@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rulers', :path => "../rulers"
 gem 'pry'
