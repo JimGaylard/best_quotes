@@ -2,6 +2,8 @@ require './config/application'
 
 app = BestQuotes::Application.new
 
+use BetterErrors::Middleware
+
 use Rack::ContentType
 
 app.route do
